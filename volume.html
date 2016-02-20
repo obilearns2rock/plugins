@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>	
+	<link rel="stylesheet" href="controlSlider/controlslider.css">
+	<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="videoControl/videocontrol.css">
+	<style>
+		/*.controlSlider-innerBar, .controlSlider-handle{
+			background-color: white !important; 
+		}*/
+		html{
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		container
+		<div id="control"></div>
+	</div>
+
+	<br>
+
+	<video id="video" width="320" height="240" controls>
+  		<source src="bringiton.mp4" type="video/mp4">  
+	</video>
+	
+	<script src="../libs/jquery/jquery-2.1.4.min.js"></script>
+	<script src="../libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+
+	<script src="volume-control.js"></script>
+	<script src="controlSlider/controlslider.js"></script>
+	<script src="videoControl/fullscreen.js"></script>
+	<script src="videoControl/videocontrol.js"></script>
+	<script>
+		var widget = $("#control").volumeControl({
+			bars:5,
+			template:'<div style="width: 10px; height: 10px; border-radius: 50%;">&nbsp;</div>',
+			onChange : function(level){
+				console.log('change : ' + level);
+			}
+		});
+		widget.volumeControl('value', 0.8);
+
+		var videoControlWidget2 = $("#video").videoControl({
+			templateUrl : "videoControl/template.html"
+		})
+	</script>
+</body>
+</html>

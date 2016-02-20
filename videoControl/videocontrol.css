@@ -1,0 +1,78 @@
+.active{
+	color: #347FFE;
+}
+.video-control{
+	background: rgba(80, 80, 80, 0.8);	
+	border-radius: 5px;
+	padding: 5px;
+	color: white;
+	width: 400px;
+	min-width: 400px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;	
+}
+.video-control-top{
+	text-align: center;
+}
+.video-control-top > div{
+	width: 30%;
+	display: inline-block;		
+}
+.video-control-top > div:nth-child(1){
+	text-align: left;	
+}
+.video-control-top > div:nth-child(1) > span{	
+	vertical-align: middle;
+}
+.video-control-top > div:nth-child(1) > div{
+	width: 60%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.video-control-top > div:nth-child(2){
+	text-align: center;	
+}
+.video-control-top > div:nth-child(2) > span{
+	vertical-align: middle;
+}
+.video-control-top > div:nth-child(3){
+	text-align: right;
+}
+
+.video-control-bottom > div{
+	display: inline-block;	
+	text-align: center;
+	vertical-align: middle;	
+}
+.video-control-bottom > div:nth-child(1){
+	width: 10%;
+	padding: 5px;
+}
+.video-control-bottom > div:nth-child(2){
+	width: 75%;	
+}
+.video-control-bottom > div:nth-child(1){
+	width: 10%;	
+	text-align: right;
+}
+
+.btn{
+	margin: 2px;
+	padding: 5px;	
+	cursor: pointer;
+}
+
+.btn:hover{
+	box-shadow: grey 0.1px 0.1px 2px 1.5px;
+	transform: scale(1.1);
+}
+
+.btn:active{
+	transform: scale(1);
+}
+
+.btn-lg{
+	font-size: xx-large;
+}
